@@ -1,7 +1,7 @@
 html {
     background: #018ded url(http://unsplash.it/1500/1000?image=881&blur=50);
     background-size: cover;
-    font-family: "helvetica neue";
+    font-family: "Oswald", sans-serif;
     text-align: center;
     font-size: 10px;
 }
@@ -13,6 +13,7 @@ body {
     flex: 1;
     min-height: 100vh;
     align-items: center;
+    flex-direction: column;
 }
 
 .clock {
@@ -44,4 +45,8 @@ body {
     transform: rotate(90deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.second-hand {
+    height: 3px;
 }

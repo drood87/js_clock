@@ -1,6 +1,7 @@
 const secondHand = document.querySelector(".second-hand");
 const minuteHand = document.querySelector(".min-hand");
 const hourHand = document.querySelector(".hour-hand");
+let visualTime = document.querySelector(".time-visual");
 
 function setDate() {
     const now = new Date();
@@ -13,6 +14,7 @@ function setDate() {
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+    visualTime.innerHTML = `${hour}:${minutes}:${seconds}`;
     console.log(`${hour}:${minutes}:${seconds}`);
 }
 
