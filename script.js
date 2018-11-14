@@ -14,8 +14,15 @@ function setDate() {
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
     minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
     hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
-    visualTime.innerHTML = `${hour}:${minutes}:${seconds}`;
-    console.log(`${hour}:${minutes}:${seconds}`);
+    if (minutes < 10) {
+        visualTime.innerHTML = `${hour}:0${minutes}:${seconds}`;
+    } else if (seconds < 10) {
+        visualTime.innerHTML = `${hour}:${minutes}:0${seconds}`;
+    } else if (hour < 10) {
+        visualTime.innerHTML = `0${hour}:${minutes}:${seconds}`;
+    } else {
+        visualTime.innerHTML = `${hour}:${minutes}:${seconds}`;
+    }
 }
 
 setInterval(setDate, 1000); //setDate is the function
